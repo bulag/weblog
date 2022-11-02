@@ -1,0 +1,47 @@
+﻿@model weblog.Models.Kısıler
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Kısıler</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.KullanıcıID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.KullanıcıID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Ad)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Ad)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Soyad)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Soyad)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Telefon)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Telefon)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

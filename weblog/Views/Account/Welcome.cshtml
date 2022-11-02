@@ -1,0 +1,20 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Welcome</title>
+</head>
+<body>
+    <table>
+        <tr>
+            Welcome @Session["username"]
+            @Html.ActionLink("Logout", "Logout", "Account")
+        </tr>
+    </table>
+</body>
+</html>

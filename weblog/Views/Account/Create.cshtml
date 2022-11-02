@@ -1,0 +1,42 @@
+﻿
+
+@{
+    ViewBag.Title = "Yeni Kullanıcı";
+}
+<p>
+    @Html.ActionLink("Oda Listesini Gör", "Liste")
+
+</p>
+<p>
+    @Html.ActionLink("Kişi Listesini Gör","List")
+</p>
+
+<br/><br/>
+<center>
+    
+        <form action="/Account/Create" method="post" border="15">
+            <label>Ad</label>
+            <br />
+            <input type="text" name="UserName" />
+            <br />
+            <br />
+            <label>Soyad</label>
+            <br />
+            <input type="text" name="UserSurName" />
+            <br />
+            <br />
+            <label>Telefon</label>
+            <br />
+            <br />
+            <input type="text" name="Telefon" />
+            <br />
+            <br />
+            <input type="submit" value="Kaydet" />
+            <br/>
+            <br/>
+
+
+        </form>
+
+</center>
+

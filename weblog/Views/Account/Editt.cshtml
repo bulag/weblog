@@ -1,0 +1,56 @@
+﻿@model weblog.Models.Odalar
+
+@{
+    ViewBag.Title = "Editt";
+}
+
+<h2>Editt</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Odalar</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.OdaID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.OdaID)
+            @Html.ValidationMessageFor(model => model.OdaID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.OdaAdı)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.OdaAdı)
+            @Html.ValidationMessageFor(model => model.OdaAdı)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.OdaSayısı)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.OdaSayısı)
+            @Html.ValidationMessageFor(model => model.OdaSayısı)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.OdaKapasıtesı)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.OdaKapasıtesı)
+            @Html.ValidationMessageFor(model => model.OdaKapasıtesı)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Liste")
+</div>

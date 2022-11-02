@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ExampleModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Odalar">
+    <Key>
+      <PropertyRef Name="OdaID" />
+    </Key>
+    <Property Name="OdaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OdaAdı" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OdaSayısı" Type="Int32" Nullable="false" />
+    <Property Name="OdaKapasıtesı" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ExampleEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Odalar" EntityType="Self.Odalar" />
+  </EntityContainer>
+</Schema>

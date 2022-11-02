@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ExampleModelStoreContainer" CdmEntityContainer="ExampleEntities2">
+    <EntitySetMapping Name="Odalar">
+      <EntityTypeMapping TypeName="ExampleModel.Odalar">
+        <MappingFragment StoreEntitySet="Odalar">
+          <ScalarProperty Name="OdaID" ColumnName="OdaID" />
+          <ScalarProperty Name="OdaAdı" ColumnName="OdaAdı" />
+          <ScalarProperty Name="OdaSayısı" ColumnName="OdaSayısı" />
+          <ScalarProperty Name="OdaKapasıtesı" ColumnName="OdaKapasıtesı" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

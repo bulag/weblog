@@ -1,0 +1,36 @@
+﻿@model weblog.Models.Odalar
+
+@{
+    ViewBag.Title = "Created";
+}
+
+
+
+<br /><br />
+<center>
+
+    <form action="/Account/Created" method="post" border="15">
+        <label>Ad</label>
+        <br />
+        <input type="text" name="OdaAdı" />
+        <br />
+        <br />
+        <label>Sayı</label>
+        <br />
+        <input type="text" name="OdaSayısı" />
+        <br />
+        <br />
+        <label>Kapasite</label>
+        <br />
+        <br />
+        <input type="text" name="OdaKapasıtesı" />
+        <br />
+        <br />
+        <input type="submit" value="Kaydet" />
+        <br />
+        <br />
+
+
+    </form>
+
+</center>

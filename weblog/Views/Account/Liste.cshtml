@@ -1,0 +1,51 @@
+﻿@model IEnumerable<weblog.Models.Odalar>
+
+@{
+    ViewBag.Title = "Liste";
+}
+
+<h2>Liste</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Created")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.OdaID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OdaAdı)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OdaSayısı)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OdaKapasıtesı)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.OdaID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OdaAdı)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OdaSayısı)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OdaKapasıtesı)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Editt", new { id=item.OdaID/* id=item.PrimaryKey */ }) 
+            @*@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |*@
+            @*@Html.ActionLink("Delete", "Delete", new { id=item.OdaID/* id=item.PrimaryKey */ })*@
+        </td>
+    </tr>
+}
+
+</table>
